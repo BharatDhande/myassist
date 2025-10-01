@@ -12,7 +12,7 @@ class Settings(BaseSettings):
     
     # Server Configuration
     HOST: str = "0.0.0.0"
-    PORT: int = 4443
+    PORT: int = 4445
     DEBUG: bool = False
     
     # AI Vision Configuration
@@ -25,6 +25,10 @@ class Settings(BaseSettings):
     )
     GEMINI_MODEL: str = "gemini-2.5-flash-lite"
     VISION_TASK: str = "assisting worker working at a plant"
+    
+    # Batch Processing Configuration
+    BATCH_SIZE: int = 4  # Number of frames to process in each batch
+    DELETE_PROCESSED_FRAMES: bool = False  # Delete frames after processing to save disk space
     
     # Voice Command Configuration
     FUZZY_THRESHOLD: int = 75

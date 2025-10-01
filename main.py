@@ -1,7 +1,7 @@
 # main.py
 """
 Unified AR/VR Assistant System
-Combines voice command processing and AI vision analysis
+Combines voice command processing and AI vision analysis with batch processing
 """
 import sys
 import io
@@ -34,10 +34,15 @@ async def lifespan(app: FastAPI):
     
     # Startup
     logger.info("🚀 Starting AR/VR Assistant System...")
+    logger.info(f"📦 Batch processing: {settings.BATCH_SIZE} frames per batch")
     
     # Initialize AI Engine Service
     if settings.ENABLE_AI_VISION:
         ai_service = AIEngineService(settings.NODE_BACKEND_URL)
+        
+        # Store in app state for access in routes
+        app.state.ai_service = ai_service
+        
         if ai_service.connect():
             logger.info("✅ AI Vision Engine connected")
             # Start AI engine in background
@@ -52,6 +57,10 @@ async def lifespan(app: FastAPI):
     # Shutdown
     logger.info("🛑 Shutting down AR/VR Assistant System...")
     if ai_service:
+        # Log remaining buffers
+        buffer_status = ai_service.get_buffer_status()
+        if buffer_status:
+            logger.info(f"📊 Remaining frames in buffers: {buffer_status}")
         ai_service.disconnect()
     logger.info("👋 Shutdown complete")
 
@@ -59,8 +68,8 @@ async def lifespan(app: FastAPI):
 # Create FastAPI application
 app = FastAPI(
     title="AR/VR Assistant System",
-    description="Unified system for voice commands and AI vision analysis",
-    version="2.0.0",
+    description="Unified system for voice commands and AI vision analysis with batch processing",
+    version="2.1.0",
     lifespan=lifespan
 )
 
@@ -74,11 +83,13 @@ async def root():
     """Root endpoint"""
     return {
         "service": "AR/VR Assistant System",
-        "version": "2.0.0",
+        "version": "2.1.0",
         "status": "running",
         "features": {
             "voice_commands": True,
-            "ai_vision": settings.ENABLE_AI_VISION
+            "ai_vision": settings.ENABLE_AI_VISION,
+            "batch_processing": True,
+            "batch_size": settings.BATCH_SIZE
         }
     }
 

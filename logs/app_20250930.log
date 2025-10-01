@@ -1,0 +1,88 @@
+2025-09-30 10:55:14 | INFO     | root | 🌐 Starting server on 0.0.0.0:4443
+2025-09-30 10:55:14 | INFO     | root | 🚀 Starting AR/VR Assistant System...
+2025-09-30 10:55:14 | INFO     | services.ai_engine_service | 🌐 Connecting to https://backendvr.marworx.com...
+2025-09-30 10:55:15 | INFO     | services.ai_engine_service | ✅ Connected to Node backend
+2025-09-30 10:55:16 | INFO     | services.ai_engine_service | ✅ Socket.IO connection established
+2025-09-30 10:55:16 | INFO     | root | ✅ AI Vision Engine connected
+2025-09-30 10:55:16 | INFO     | services.ai_engine_service | 🚀 AI Engine service running...
+2025-09-30 11:22:29 | ERROR    | engineio.client | packet queue is empty, aborting
+2025-09-30 11:22:44 | WARNING  | services.ai_engine_service | ❌ Disconnected from Node backend
+2025-09-30 11:22:46 | INFO     | services.ai_engine_service | ✅ Connected to Node backend
+2025-09-30 11:26:29 | WARNING  | services.ai_engine_service | ❌ Disconnected from Node backend
+2025-09-30 11:26:29 | INFO     | root | 🛑 Shutting down AR/VR Assistant System...
+2025-09-30 11:26:29 | INFO     | root | 👋 Shutdown complete
+2025-09-30 11:30:46 | INFO     | root | 🌐 Starting server on 0.0.0.0:4443
+2025-09-30 11:30:46 | INFO     | root | 🚀 Starting AR/VR Assistant System...
+2025-09-30 11:30:46 | INFO     | services.ai_engine_service | 🌐 Connecting to https://backendvr.marworx.com...
+2025-09-30 11:30:46 | INFO     | services.ai_engine_service | ✅ Connected to Node backend
+2025-09-30 11:30:47 | INFO     | services.ai_engine_service | ✅ Socket.IO connection established
+2025-09-30 11:30:47 | INFO     | root | ✅ AI Vision Engine connected
+2025-09-30 11:30:47 | INFO     | services.ai_engine_service | 🚀 AI Engine service running...
+2025-09-30 11:31:16 | INFO     | api.voice_routes | [VOICE] Received command: 'move'
+2025-09-30 11:31:16 | INFO     | services.voice_command_service | [VOICE] Match: 'move forward' (score: 90)
+2025-09-30 12:07:20 | WARNING  | services.ai_engine_service | ❌ Disconnected from Node backend
+2025-09-30 12:07:22 | INFO     | services.ai_engine_service | ✅ Connected to Node backend
+2025-09-30 12:58:41 | INFO     | root | 🌐 Starting server on 0.0.0.0:4443
+2025-09-30 12:58:41 | INFO     | root | 🚀 Starting AR/VR Assistant System...
+2025-09-30 12:58:41 | INFO     | services.ai_engine_service | 🌐 Connecting to https://backendvr.marworx.com...
+2025-09-30 12:58:42 | INFO     | services.ai_engine_service | ✅ Connected to Node backend
+2025-09-30 12:58:43 | INFO     | services.ai_engine_service | ✅ Socket.IO connection established
+2025-09-30 12:58:43 | INFO     | root | ✅ AI Vision Engine connected
+2025-09-30 12:58:43 | INFO     | services.ai_engine_service | 🚀 AI Engine service running...
+2025-09-30 12:59:25 | INFO     | api.voice_routes | [VOICE] Received command: 'move'
+2025-09-30 12:59:25 | INFO     | services.voice_command_service | [VOICE] Match: 'move forward' (score: 90)
+2025-09-30 14:01:44 | WARNING  | services.ai_engine_service | ❌ Disconnected from Node backend
+2025-09-30 14:01:46 | INFO     | services.ai_engine_service | ✅ Connected to Node backend
+2025-09-30 14:04:20 | WARNING  | services.ai_engine_service | ❌ Disconnected from Node backend
+2025-09-30 14:04:20 | INFO     | root | 🛑 Shutting down AR/VR Assistant System...
+2025-09-30 14:04:20 | INFO     | root | 👋 Shutdown complete
+2025-09-30 14:04:40 | INFO     | root | 🌐 Starting server on 0.0.0.0:4443
+2025-09-30 14:04:40 | INFO     | root | 🚀 Starting AR/VR Assistant System...
+2025-09-30 14:04:40 | INFO     | root | 📦 Batch processing: 4 frames per batch
+2025-09-30 14:04:40 | INFO     | services.ai_engine_service | 🌐 Connecting to https://backendvr.marworx.com...
+2025-09-30 14:04:40 | INFO     | services.ai_engine_service | ✅ Connected to Node backend
+2025-09-30 14:04:40 | INFO     | root | ✅ AI Vision Engine connected
+2025-09-30 14:04:40 | INFO     | services.ai_engine_service | 🚀 AI Engine service running...
+2025-09-30 14:04:57 | WARNING  | services.ai_engine_service | ❌ Disconnected from Node backend
+2025-09-30 14:04:57 | INFO     | root | 🛑 Shutting down AR/VR Assistant System...
+2025-09-30 14:04:57 | INFO     | root | 👋 Shutdown complete
+2025-09-30 14:07:02 | INFO     | root | 🌐 Starting server on 0.0.0.0:4443
+2025-09-30 14:07:02 | INFO     | root | 🚀 Starting AR/VR Assistant System...
+2025-09-30 14:07:02 | INFO     | root | 📦 Batch processing: 4 frames per batch
+2025-09-30 14:07:02 | INFO     | services.ai_engine_service | 🌐 Connecting to https://backendvr.marworx.com...
+2025-09-30 14:07:02 | INFO     | services.ai_engine_service | ✅ Connected to Node backend
+2025-09-30 14:07:02 | INFO     | root | ✅ AI Vision Engine connected
+2025-09-30 14:07:02 | INFO     | services.ai_engine_service | 🚀 AI Engine service running...
+2025-09-30 14:09:31 | WARNING  | services.ai_engine_service | ❌ Disconnected from Node backend
+2025-09-30 14:09:33 | INFO     | services.ai_engine_service | ✅ Connected to Node backend
+2025-09-30 14:09:43 | INFO     | services.ai_engine_service | [GAME] Started - Game: game1, Player: player1
+2025-09-30 14:09:59 | INFO     | services.ai_engine_service | [FRAME] Received 5 frame(s) for game1:player1
+2025-09-30 14:09:59 | WARNING  | services.ai_engine_service | ⚠️ Invalid or missing frame: /root/github/proverse_mcq/backend/data/game1-player1/1759221595222.jpg
+2025-09-30 14:09:59 | WARNING  | services.ai_engine_service | ⚠️ Invalid or missing frame: /root/github/proverse_mcq/backend/data/game1-player1/1759221596517.jpg
+2025-09-30 14:09:59 | WARNING  | services.ai_engine_service | ⚠️ Invalid or missing frame: /root/github/proverse_mcq/backend/data/game1-player1/1759221597644.jpg
+2025-09-30 14:09:59 | WARNING  | services.ai_engine_service | ⚠️ Invalid or missing frame: /root/github/proverse_mcq/backend/data/game1-player1/1759221598360.jpg
+2025-09-30 14:09:59 | WARNING  | services.ai_engine_service | ⚠️ Invalid or missing frame: /root/github/proverse_mcq/backend/data/game1-player1/1759221599166.jpg
+2025-09-30 14:09:59 | INFO     | services.ai_engine_service | [BUFFER] game1:player1: 0 frames (processing: False)
+2025-09-30 14:10:00 | INFO     | services.ai_engine_service | [FRAME] Received 5 frame(s) for game1:player1
+2025-09-30 14:10:00 | WARNING  | services.ai_engine_service | ⚠️ Invalid or missing frame: /root/github/proverse_mcq/backend/data/game1-player1/1759221596517.jpg
+2025-09-30 14:10:00 | WARNING  | services.ai_engine_service | ⚠️ Invalid or missing frame: /root/github/proverse_mcq/backend/data/game1-player1/1759221597644.jpg
+2025-09-30 14:10:00 | WARNING  | services.ai_engine_service | ⚠️ Invalid or missing frame: /root/github/proverse_mcq/backend/data/game1-player1/1759221598360.jpg
+2025-09-30 14:10:00 | WARNING  | services.ai_engine_service | ⚠️ Invalid or missing frame: /root/github/proverse_mcq/backend/data/game1-player1/1759221599166.jpg
+2025-09-30 14:10:00 | WARNING  | services.ai_engine_service | ⚠️ Invalid or missing frame: /root/github/proverse_mcq/backend/data/game1-player1/1759221600184.jpg
+2025-09-30 14:10:00 | INFO     | services.ai_engine_service | [BUFFER] game1:player1: 0 frames (processing: False)
+2025-09-30 14:10:08 | WARNING  | services.ai_engine_service | ❌ Disconnected from Node backend
+2025-09-30 14:10:08 | INFO     | root | 🛑 Shutting down AR/VR Assistant System...
+2025-09-30 14:10:08 | INFO     | root | 📊 Remaining frames in buffers: {'game1:player1': {'frames_in_buffer': 0, 'is_processing': False}}
+2025-09-30 14:10:08 | INFO     | root | 👋 Shutdown complete
+2025-09-30 14:12:32 | INFO     | root | 🌐 Starting server on 0.0.0.0:4443
+2025-09-30 14:12:32 | INFO     | root | 🚀 Starting AR/VR Assistant System...
+2025-09-30 14:12:32 | INFO     | root | 📦 Batch processing: 4 frames per batch
+2025-09-30 14:12:32 | INFO     | services.ai_engine_service | 🌐 Connecting to https://backendvr.marworx.com...
+2025-09-30 14:12:32 | INFO     | services.ai_engine_service | ✅ Connected to Node backend
+2025-09-30 14:12:32 | INFO     | root | ✅ AI Vision Engine connected
+2025-09-30 14:12:32 | INFO     | services.ai_engine_service | 🚀 AI Engine service running...
+2025-09-30 14:13:18 | INFO     | api.voice_routes | [VOICE] Received command: 'move'
+2025-09-30 14:13:18 | INFO     | services.voice_command_service | [VOICE] Match: 'move forward' (score: 90)
+2025-09-30 14:19:05 | WARNING  | services.ai_engine_service | ❌ Disconnected from Node backend
+2025-09-30 14:19:05 | INFO     | root | 🛑 Shutting down AR/VR Assistant System...
+2025-09-30 14:19:05 | INFO     | root | 👋 Shutdown complete
