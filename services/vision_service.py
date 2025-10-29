@@ -136,7 +136,7 @@ class VisionService:
         task: str
     ) -> str:
         """
-        Analyze a batch of image frames (returns text message)
+        Analyze a batch of image frames
         
         Args:
             batch_sources: List of image sources
@@ -144,24 +144,6 @@ class VisionService:
             
         Returns:
             Natural language summary of analysis
-        """
-        analysis_data = self.analyze_frame_batch_detailed(batch_sources, task)
-        return analysis_data.get("message", "Monitoring workspace")
-    
-    def analyze_frame_batch_detailed(
-        self, 
-        batch_sources: List[Union[bytes, str]], 
-        task: str
-    ) -> Dict:
-        """
-        Analyze a batch of image frames (returns detailed data)
-        
-        Args:
-            batch_sources: List of image sources
-            task: Task description for context
-            
-        Returns:
-            Dictionary with status, message, and analysis details
         """
         logger.info(f"[VISION] Analyzing batch of {len(batch_sources)} frames")
         start_time = time.time()
@@ -176,11 +158,7 @@ class VisionService:
                 logger.warning(f"[VISION] Skipping invalid source: {source}")
         
         if not valid_images:
-            return {
-                "status": "error",
-                "message": "No valid images found to analyze.",
-                "has_changes": False
-            }
+            return "No valid images found to analyze."
         
         # Process frames in parallel
         observations = []
@@ -210,24 +188,11 @@ class VisionService:
         logger.info(f"[VISION] Batch processed in {processing_time:.2f}s")
         
         if not observations:
-            return {
-                "status": "ok",
-                "message": "I'm monitoring the workspace. Keep working safely!",
-                "has_changes": False
-            }
+            return "I'm monitoring the workspace. Keep working safely!"
         
         # Prioritize observations by status
         danger_count = statuses.count("danger")
         adjustment_count = statuses.count("needs_adjustment")
-        ok_count = statuses.count("ok")
-        
-        # Determine overall status
-        if danger_count > 0:
-            overall_status = "danger"
-        elif adjustment_count > 0:
-            overall_status = "needs_adjustment"
-        else:
-            overall_status = "ok"
         
         priority_observations = []
         if danger_count > 0:
@@ -241,8 +206,7 @@ class VisionService:
                 if statuses[i] == "needs_adjustment"
             ][:2]
         else:
-            # For "ok" status, only include if there's actionable content
-            priority_observations = observations[:1]
+            priority_observations = observations[:2]
         
         # Generate status summary
         status_summary = ""
@@ -270,31 +234,13 @@ class VisionService:
             response = model.generate_content(prompt)
             final_message = response.text.strip()
             logger.info(f"[VISION] Final message: {final_message}")
-            
-            return {
-                "status": overall_status,
-                "message": final_message,
-                "has_changes": True,
-                "danger_count": danger_count,
-                "adjustment_count": adjustment_count,
-                "ok_count": ok_count
-            }
+            return final_message
         except Exception as e:
             logger.error(f"[VISION] Summary generation error: {e}")
             # Fallback messages
-            fallback_message = ""
             if danger_count > 0:
-                fallback_message = "⚠️ Safety alert! Please review your current actions."
+                return "⚠️ Safety alert! Please review your current actions."
             elif adjustment_count > 0:
-                fallback_message = "Good progress! Consider making some adjustments."
+                return "Good progress! Consider making some adjustments."
             else:
-                fallback_message = "Excellent work! Keep maintaining those safety standards."
-            
-            return {
-                "status": overall_status,
-                "message": fallback_message,
-                "has_changes": True,
-                "danger_count": danger_count,
-                "adjustment_count": adjustment_count,
-                "ok_count": ok_count
-            }
+                return "Excellent work! Keep maintaining those safety standards."
