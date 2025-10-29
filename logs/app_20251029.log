@@ -1,0 +1,20 @@
+2025-10-29 10:43:55 | INFO     | root | 🌐 Starting server on 0.0.0.0:4443
+2025-10-29 10:43:55 | INFO     | root | 🚀 Starting AR/VR Assistant System...
+2025-10-29 10:43:55 | INFO     | services.ai_engine_service | 🌐 Connecting to https://backendvr.marworx.com...
+2025-10-29 10:43:55 | ERROR    | services.ai_engine_service | ❌ Connection error: Connection error
+2025-10-29 10:43:55 | ERROR    | services.ai_engine_service | ❌ Socket.IO Connection Error: Connection error
+2025-10-29 10:43:55 | INFO     | services.ai_engine_service | Possible causes:
+2025-10-29 10:43:55 | INFO     | services.ai_engine_service |   1. Backend server not running
+2025-10-29 10:43:55 | INFO     | services.ai_engine_service |   2. CORS configuration blocking connection
+2025-10-29 10:43:55 | INFO     | services.ai_engine_service |   3. Incorrect Socket.IO namespace or path
+2025-10-29 10:43:55 | WARNING  | root | ⚠️ AI Vision Engine failed to connect
+2025-10-29 10:46:14 | INFO     | root | 🛑 Shutting down AR/VR Assistant System...
+2025-10-29 10:46:14 | INFO     | root | 👋 Shutdown complete
+2025-10-29 10:46:23 | INFO     | root | 🌐 Starting server on 0.0.0.0:4443
+2025-10-29 10:46:23 | INFO     | root | 🚀 Starting AR/VR Assistant System...
+2025-10-29 10:47:33 | INFO     | root | 🌐 Starting server on 0.0.0.0:4443
+2025-10-29 10:47:33 | INFO     | root | 🚀 Starting AR/VR Assistant System...
+2025-10-29 10:47:33 | INFO     | root | 📦 Batch processing: 4 frames per batch
+2025-10-29 10:47:33 | INFO     | services.ai_engine_service | 🌐 Connecting to https://backendvr.marworx.com...
+2025-10-29 10:47:33 | ERROR    | services.ai_engine_service | ❌ Connection failed: Connection error
+2025-10-29 10:47:33 | WARNING  | root | ⚠️ AI Vision Engine failed to connect
