@@ -24,7 +24,12 @@ class Settings(BaseSettings):
         "GEMINI_API_KEY"
     )
     GEMINI_MODEL: str = "gemini-2.5-flash-lite"
-    VISION_TASK: str = "assisting worker working at a plant"
+    VISION_TASK: str = "assisting the user based on first-person AR/VR headset view frames, analyzing surroundings and actions to provide real-time guidance and corrections"
+
+    
+    # Batch Processing Configuration
+    BATCH_SIZE: int = 4  # Number of frames to process in each batch
+    DELETE_PROCESSED_FRAMES: bool = False  # Delete frames after processing to save disk space
     
     # Voice Command Configuration
     FUZZY_THRESHOLD: int = 75
